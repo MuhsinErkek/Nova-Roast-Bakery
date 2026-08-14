@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA Roast & Bakery</title>
+  
+  <!-- Bootstrap 5.3.0 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <style>
+    /* Kafe Arka Planı ve Okunabilirlik Katmanı */
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), 
+                  url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (Bootstrap 5 Sözdizimi: data-bs-toggle) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 sticky-top border-bottom border-secondary border-opacity-25 shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4 text-warning" href="#">
+        NOVA <span class="text-white fs-6">Roast & Bakery</span>
+      </a>
+      
+      <!-- Mobil Hamburger Butonu (Bootstrap 5 Uyumlu) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fw-semibold">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Ana Sayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#icecekler">İçecekler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#yiyecekler">Yiyecekler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#iletisim">İletişim</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ANA İÇERİK CONTAINER -->
+  <div class="container my-5">
+    
+    <!-- Header / Banner -->
+    <div class="text-center mb-5 text-white">
+      <h1 class="fw-bold display-4">
+        NOVA <span class="text-warning">Roast & Bakery</span>
+      </h1>
+      <p class="fs-5 text-light opacity-75">
+        Ağır ağır demlenen kahveler, fırından yeni çıkmış artisan lezzetler.
+      </p>
+    </div>
+
+    <!-- 1. BÖLÜM: SOĞUK İÇECEKLER -->
+    <h3 id="icecekler" class="text-warning fw-bold mb-4 border-start border-4 border-warning ps-3 pt-3">
+      ☕ Öne Çıkan Soğuk İçeceklerimiz
+    </h3>
+
+    <div class="row g-4 mb-5"> 
+      <!-- Cold Americano -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow border-0">
+          <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&auto=format&fit=crop" class="card-img-top" alt="Cold Americano" style="height: 280px; object-fit: cover;">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="card-title mb-0 fw-bold">Cold Americano</h5>
+              <span class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-pill">₺110</span>
+            </div>
+            <p class="card-text text-muted small">Özel harman espresso ve buzul buz parçalarıyla hazırlanan serinletici, sert bir klasik.</p>
+            <button class="btn btn-success mt-auto w-100 fw-bold">Sipariş Et</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Iced Spanish Latte -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow border-0">
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800&auto=format&fit=crop" class="card-img-top" alt="Iced Spanish Latte" style="height: 280px; object-fit: cover;">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="card-title mb-0 fw-bold">Iced Spanish Latte</h5>
+              <span class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-pill">₺140</span>
+            </div>
+            <p class="card-text text-muted small">Yoğun espresso, soğuk süt ve tatlandırılmış yoğunlaştırılmış süt dokunuşuyla tatlı bir mola.</p>
+            <button class="btn btn-success mt-auto w-100 fw-bold">Sipariş Et</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Matcha Latte -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow border-0">
+          <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=800&auto=format&fit=crop" class="card-img-top" alt="Matcha Latte" style="height: 280px; object-fit: cover;">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="card-title mb-0 fw-bold">Matcha Latte</h5>
+              <span class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-pill">₺150</span>
+            </div>
+            <p class="card-text text-muted small">Japonya'dan gelen organik ceremonial grade matcha ve badem sütü uyumu.</p>
+            <button class="btn btn-success mt-auto w-100 fw-bold">Sipariş Et</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. BÖLÜM: YİYECEKLER & TATLILAR -->
+    <h3 id="yiyecekler" class="text-warning fw-bold mb-4 border-start border-4 border-warning ps-3 pt-3">
+      🥐 Fırından & Artisan Lezzetler
+    </h3>
+
+    <div class="row g-4 mb-5"> 
+      <!-- Artisan Kruvasan -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow border-0">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&auto=format&fit=crop" class="card-img-top" alt="Artisan Kruvasan" style="height: 280px; object-fit: cover;">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="card-title mb-0 fw-bold">Artisan Kruvasan</h5>
+              <span class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-pill">₺125</span>
+            </div>
+            <p class="card-text text-muted small">%100 Fransız tereyağı ile 72 saatte kat kat hazırlanan taze, çıtır fırın klasiği.</p>
+            <button class="btn btn-success mt-auto w-100 fw-bold">Sipariş Et</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Focaccia Sandviç -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow border-0">
+          <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?w=800&auto=format&fit=crop" class="card-img-top" alt="Focaccia Sandviç" style="height: 280px; object-fit: cover;">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="card-title mb-0 fw-bold">Focaccia Sandviç</h5>
+              <span class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-pill">₺210</span>
+            </div>
+            <p class="card-text text-muted small">Biberiyeli ev yapımı focaccia ekmeğinde taze mozzarella, fesleğen pesto ve füme et.</p>
+            <button class="btn btn-success mt-auto w-100 fw-bold">Sipariş Et</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- San Sebastian Cheesecake -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 shadow border-0">
+          <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=800&auto=format&fit=crop" class="card-img-top" alt="San Sebastian Cheesecake" style="height: 280px; object-fit: cover;">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="card-title mb-0 fw-bold">San Sebastian</h5>
+              <span class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-pill">₺185</span>
+            </div>
+            <p class="card-text text-muted small">Dışı akışkan karamelize, içi ipeksi kıvamda; yanında sıcak Belçika çikolatası ile.</p>
+            <button class="btn btn-success mt-auto w-100 fw-bold">Sipariş Et</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. BÖLÜM: İLETİŞİM & LOKASYON -->
+    <h3 id="iletisim" class="text-warning fw-bold mb-4 border-start border-4 border-warning ps-3 pt-3">
+      📍 Bize Ulaşın & İletişim
+    </h3>
+
+    <div class="row g-4 mb-5">
+      <!-- Sol Taraf: Adres, Telefon, Sosyal Medya -->
+      <div class="col-12 col-md-5">
+        <div class="p-4 bg-dark text-white rounded shadow h-100 border border-secondary border-opacity-25 d-flex flex-column justify-content-between">
+          <div>
+            <h4 class="fw-bold text-warning mb-3">NOVA Roast & Bakery</h4>
+            <p class="text-light opacity-75 mb-4">
+              Kahve kokulu sohbetler ve taze fırın lezzetleri için haftanın her günü hizmetinizdeyiz.
+            </p>
+
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-geo-alt-fill text-warning fs-4 me-3"></i>
+              <div>
+                <strong class="d-block">Adres</strong>
+                <span class="small text-light opacity-75">Tunalı Hilmi Cd. No: 142/A, Çankaya / Ankara</span>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-telephone-fill text-warning fs-4 me-3"></i>
+              <div>
+                <strong class="d-block">Telefon</strong>
+                <span class="small text-light opacity-75">+90 (312) 456 78 90</span>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center mb-4">
+              <i class="bi bi-clock-fill text-warning fs-4 me-3"></i>
+              <div>
+                <strong class="d-block">Çalışma Saatleri</strong>
+                <span class="small text-light opacity-75">Her gün: 08:00 - 23:00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sosyal Medya İkonları -->
+          <div>
+            <h6 class="fw-bold text-warning mb-2">Bizi Takip Edin</h6>
+            <div class="d-flex gap-2">
+              <a href="javascript:void(0)" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;"><i class="bi bi-instagram"></i></a>
+              <a href="javascript:void(0)" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;"><i class="bi bi-facebook"></i></a>
+              <a href="javascript:void(0)" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;"><i class="bi bi-twitter-x"></i></a>
+              <a href="javascript:void(0)" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;"><i class="bi bi-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sağ Taraf: İletişim Formu -->
+      <div class="col-12 col-md-7">
+        <div class="p-4 bg-white rounded shadow h-100">
+          <h4 class="fw-bold text-dark mb-1">Masana Rezerve Et veya Not Bırak</h4>
+          <p class="text-muted small mb-4">Görüşlerinizi, özel etkinlik taleplerinizi veya rezervasyon isteklerinizi iletebilirsiniz.</p>
+          
+          <form onsubmit="event.preventDefault();">
+            <div class="row g-3">
+              <div class="col-12 col-sm-6">
+                <label class="form-label fw-semibold small mb-1">Adınız Soyadınız</label>
+                <input type="text" class="form-control" placeholder="Ahmet Yılmaz">
+              </div>
+              <div class="col-12 col-sm-6">
+                <label class="form-label fw-semibold small mb-1">E-Posta Adresiniz</label>
+                <input type="email" class="form-control" placeholder="ahmet@example.com">
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold small mb-1">Konu</label>
+                <select class="form-select">
+                  <option selected>Bir konu seçin...</option>
+                  <option value="1">Masa Rezervasyonu</option>
+                  <option value="2">Özel Etkinlik / Toplu Organizasyon</option>
+                  <option value="3">Öneri ve Geri Bildirim</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold small mb-1">Mesajınız</label>
+                <textarea class="form-control" rows="3" placeholder="Mesajınızı buraya yazabilirsiniz..."></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-warning w-100 fw-bold py-2">Mesajı Gönder 🚀</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- Ana Container Kapanışı -->
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light py-3 border-top border-secondary border-opacity-25">
+    <div class="container text-center small opacity-75">
+      <p class="mb-0">© 2026 <strong>NOVA Roast & Bakery</strong>. Tüm hakları saklıdır. — Tasarım & Frontend Demo</p>
+    </div>
+  </footer>
+
+  <!-- SADECE BOOTSTRAP 5 JS (jQuery GEREKTİRMEZ, MOBİL MENÜ DÜZGÜN ÇALIŞIR) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
