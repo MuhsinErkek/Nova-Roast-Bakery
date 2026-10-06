@@ -501,7 +501,8 @@
                 <div class="col-md-6">
                   <label class="form-label fw-semibold">Telefon</label>
                   <input id="customerPhone" type="tel" class="form-control"
-                    placeholder="05XX XXX XX XX" required>
+  placeholder="05XX XXX XX XX" inputmode="numeric"
+  autocomplete="tel" required>
                 </div>
 
                 <div class="col-12">
@@ -781,6 +782,52 @@
     const orderSuccess = document.getElementById("orderSuccess");
     const checkoutFormContent = document.getElementById("checkoutFormContent");
     const checkoutFooter = document.getElementById("checkoutFooter");
+    /*
+  TELEFON DOĞRULAMA (05XX XXX XX XX)
+*/
+const customerPhoneInput = document.getElementById("customerPhone");
+
+function formatPhone(digits) {
+  return [
+    digits.slice(0, 4),
+    digits.slice(4, 7),
+    digits.slice(7, 9),
+    digits.slice(9, 11)
+  ].filter(Boolean).join(" ");
+}
+
+function validatePhone() {
+  const digits = customerPhoneInput.value.replace(/\D/g, "");
+
+  // Boşsa "required" kuralı uyarıyı versin
+  if (digits.length === 0) {
+    customerPhoneInput.setCustomValidity("");
+    return false;
+  }
+
+  if (digits.length !== 11 || !digits.startsWith("05")) {
+    customerPhoneInput.setCustomValidity(
+      "Lütfen 05 ile başlayan 11 haneli bir cep telefonu girin."
+    );
+    return false;
+  }
+
+  customerPhoneInput.setCustomValidity("");
+  return true;
+}
+
+customerPhoneInput.addEventListener("input", () => {
+  let digits = customerPhoneInput.value.replace(/\D/g, "");
+
+  // +90 veya 90 ile yapıştırılan numarayı 0'lı biçime çevir
+  if (digits.startsWith("90") && digits.length >= 12) {
+    digits = "0" + digits.slice(2);
+  }
+
+  digits = digits.slice(0, 11);
+  customerPhoneInput.value = formatPhone(digits);
+  validatePhone();
+});
 
     const checkoutModalInstance = bootstrap.Modal.getOrCreateInstance(checkoutModal);
 
@@ -823,6 +870,10 @@
       if (cart.length === 0) {
         return;
       }
+      if (!validatePhone()) {
+  customerPhoneInput.reportValidity();
+  return;
+}
 
       updateCheckoutSummary();
 
@@ -879,7 +930,8 @@
       */
 
       checkoutForm.reset();
-
+      
+      customerPhoneInput.setCustomValidity("");
       checkoutFormContent.classList.remove("d-none");
       checkoutFooter.classList.remove("d-none");
       orderSuccess.classList.add("d-none");
